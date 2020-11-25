@@ -1,0 +1,11 @@
+.App {
+  width: 100%;
+  min-height: 100%;
+}
+
+@each $ColorName, $ColorValue in $Colors {
+  .App.#{$ColorName} {
+    background-color: $ColorValue;
+  }
+}
+

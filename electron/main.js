@@ -23,6 +23,8 @@ const createWindow = () => {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  mainWindow.setMenuBarVisibility(false)
 };
 
 app.on('ready', createWindow);
