@@ -1,9 +1,11 @@
 import { observer, inject } from 'mobx-react';
 
+import Routes from './Routes';
+
 function App(props) {
   return (
     <div className={`App ${props.App.color}`}>
-      <div></div>
+      <Routes />
     </div>
   );
 }

@@ -1,0 +1,9 @@
+.ColorPicker {
+  display: inline-flex;
+  & > .ColorSelect {
+    margin-right: 6px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

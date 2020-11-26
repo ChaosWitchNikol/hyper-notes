@@ -6,3 +6,13 @@ export const ColorLight = 'ColorLight';
 export const ColorDark = 'ColorDark';
 
 export const ColorDefault = ColorYellow;
+
+
+export default [
+  ColorBlue,
+  ColorGreen,
+  ColorYellow,
+  ColorRed,
+  ColorLight,
+  ColorDark,
+];

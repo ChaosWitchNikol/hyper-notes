@@ -2,18 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-import App from 'components/App';
+import Main from 'Main';
 
-import { Provider as MobXProvider } from 'mobx-react';
-import store from 'store';
-
-import './styles/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MobXProvider {...store}>
-      <App />
-    </MobXProvider>
+    <Main />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,56 @@
+$selects: (
+  'ColorYellow': #f57f17,
+  'ColorBlue': #0d47a1,
+  'ColorRed': #b71c1c,
+  'ColorGreen': #33691e,
+  'ColorLight': #212121,
+  'ColorDark': #eeeeee,
+  'ColorIndigo': #eee,
+);
+
+.ColorSelect {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  position: relative;
+  margin: 2px;
+  cursor: pointer;
+  z-index: 1;
+  &:after,
+  &:before {
+    content: ' ';
+    position: absolute;
+  }
+  &:after {
+    border-radius: 10px;
+
+    background-color: transparent;
+    transition: background-color 150ms ease-in-out;
+    z-index: -1;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+  }
+  &:before {
+    border-radius: 8px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@each $colorName, $colorValue in $Colors {
+  .ColorSelect.#{$colorName} {
+    &:before {
+      background-color: $colorValue;
+    }
+    &.Selected {
+      &:after {
+        background-color: map-get($selects, $colorName);
+      }
+    }
+  }
+}
